@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFF11C61-18A3-4643-9643-C1B133C7F7AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201911290740481_UpdateTable_AllTable.cs" />
+    <Compile Include="Migrations\201911290740481_UpdateTable_AllTable.Designer.cs">
+      <DependentUpon>201911290740481_UpdateTable_AllTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912030609384_AddField_Article_Type_Date.cs" />
+    <Compile Include="Migrations\201912030609384_AddField_Article_Type_Date.Designer.cs">
+      <DependentUpon>201912030609384_AddField_Article_Type_Date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912040720430_AddField_Article_ArticleAuthor.cs" />
+    <Compile Include="Migrations\201912040720430_AddField_Article_ArticleAuthor.Designer.cs">
+      <DependentUpon>201912040720430_AddField_Article_ArticleAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050823136_EditField_ArticleOperating_articleID.cs" />
+    <Compile Include="Migrations\201912050823136_EditField_ArticleOperating_articleID.Designer.cs">
+      <DependentUpon>201912050823136_EditField_ArticleOperating_articleID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912060237060_EditField_FileInfo_UID_FileType.cs" />
+    <Compile Include="Migrations\201912060237060_EditField_FileInfo_UID_FileType.Designer.cs">
+      <DependentUpon>201912060237060_EditField_FileInfo_UID_FileType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912060839533_AddField_WeCharUserInfo_Phone.cs" />
+    <Compile Include="Migrations\201912060839533_AddField_WeCharUserInfo_Phone.Designer.cs">
+      <DependentUpon>201912060839533_AddField_WeCharUserInfo_Phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912090736126_AddField_WeCharUserInfo_ShareCode.cs" />
+    <Compile Include="Migrations\201912090736126_AddField_WeCharUserInfo_ShareCode.Designer.cs">
+      <DependentUpon>201912090736126_AddField_WeCharUserInfo_ShareCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912110749450_AddFiled_Account_WeCharUserInfo_Article_Status.cs" />
+    <Compile Include="Migrations\201912110749450_AddFiled_Account_WeCharUserInfo_Article_Status.Designer.cs">
+      <DependentUpon>201912110749450_AddFiled_Account_WeCharUserInfo_Article_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912120928058_AddField_Article_Views_Forward.cs" />
+    <Compile Include="Migrations\201912120928058_AddField_Article_Views_Forward.Designer.cs">
+      <DependentUpon>201912120928058_AddField_Article_Views_Forward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Enum\AccountStatusEnum.cs" />
+    <Compile Include="Model\Enum\ArticleStatusEnum.cs" />
+    <Compile Include="Model\Enum\ArticleTypeEnum.cs" />
+    <Compile Include="Model\Enum\FileTypeEnum.cs" />
+    <Compile Include="Model\Enum\WeCharUserInfoStatusEnum.cs" />
+    <Compile Include="NightTalkContext.cs" />
+    <Compile Include="Migrations\201911280622429_AddTable_AllTable.cs" />
+    <Compile Include="Migrations\201911280622429_AddTable_AllTable.Designer.cs">
+      <DependentUpon>201911280622429_AddTable_AllTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\ArticleOperating.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\FileInfo.cs" />
+    <Compile Include="Model\WeCharUserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Common\Infrastructure.Common.csproj">
+      <Project>{668b01cb-f0ec-4f4f-9085-45bb84358ede}</Project>
+      <Name>Infrastructure.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911280622429_AddTable_AllTable.resx">
+      <DependentUpon>201911280622429_AddTable_AllTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911290740481_UpdateTable_AllTable.resx">
+      <DependentUpon>201911290740481_UpdateTable_AllTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912030609384_AddField_Article_Type_Date.resx">
+      <DependentUpon>201912030609384_AddField_Article_Type_Date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912040720430_AddField_Article_ArticleAuthor.resx">
+      <DependentUpon>201912040720430_AddField_Article_ArticleAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050823136_EditField_ArticleOperating_articleID.resx">
+      <DependentUpon>201912050823136_EditField_ArticleOperating_articleID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912060237060_EditField_FileInfo_UID_FileType.resx">
+      <DependentUpon>201912060237060_EditField_FileInfo_UID_FileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912060839533_AddField_WeCharUserInfo_Phone.resx">
+      <DependentUpon>201912060839533_AddField_WeCharUserInfo_Phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912090736126_AddField_WeCharUserInfo_ShareCode.resx">
+      <DependentUpon>201912090736126_AddField_WeCharUserInfo_ShareCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912110749450_AddFiled_Account_WeCharUserInfo_Article_Status.resx">
+      <DependentUpon>201912110749450_AddFiled_Account_WeCharUserInfo_Article_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912120928058_AddField_Article_Views_Forward.resx">
+      <DependentUpon>201912120928058_AddField_Article_Views_Forward.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
